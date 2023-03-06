@@ -1,10 +1,10 @@
-# Table of contents
+## Dev Road, Dev Note
 
-## GitBook
+* [Intro](README.md)
 
-* [📚 Dev Road, Dev Note](README.md)
+<br>
 
-***
+### Contents
 
 * [Week1](week1/README.md)
   * [SubPage 1](week1/subpage-1.md)
