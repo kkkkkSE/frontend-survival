@@ -1,6 +1,6 @@
 ---
-description: Git Book을 적극 활용해보자 !
+description: 데브로드 프론트엔드 생존코스 학습 기록
 ---
 
-# 📙 Git Book 가이드
+# 📚 Dev Road, Dev Note
 
