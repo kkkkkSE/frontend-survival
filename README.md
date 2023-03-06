@@ -1,6 +1,4 @@
----
-description: Git Book을 적극 활용해보자 !
----
+# 📚 Dev Road, Dev Note
 
-# 📙 Git Book 가이드
-
+- 데브로드 프론트엔드 생존코스 학습 기록 공간
+- 기간 : 2023.03.06 ~ 2023.05.28

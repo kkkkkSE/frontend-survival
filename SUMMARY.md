@@ -1,8 +1,12 @@
-# Table of contents
+## Dev Road, Dev Note
 
-## GitBook
+---
 
-* [📙 Git Book 가이드](README.md)
+* [Intro](README.md)
 
-* [GitHub과 연동하기](/integration/integration-with-github.md)
-  * [PR 날리기](/integration/pull-request.md)
+<br>
+
+### Contents
+
+* [Week1](week1/README.md)
+  * [SubPage 1](week1/subpage-1.md)
