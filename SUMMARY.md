@@ -1,7 +1,5 @@
 ## Dev Road, Dev Note
 
----
-
 * [Intro](README.md)
 
 <br>
