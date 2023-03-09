@@ -41,28 +41,28 @@ package.json 내 항목 중
 
 ### 필요한 개발 프로그램 및 개발 도구 설치
 
-* typescript 설치 및 설정 파일 생성
+#### typescript 설치 및 설정 파일 생성
 
 ```
 npm i -D typescript
 npx tsc --init
 ```
 
-* ESLint 설치 및 설정 파일 생성
+#### ESLint 설치 및 설정 파일 생성
 
 ```
 npm i -D eslint
 npx eslint --init
 ```
 
-* React와 React type 정보 설치
+#### React와 React type 정보 설치
 
 ```
 npm i react react-dom
 npm i -D @types/react @types/react-dom
 ```
 
-* 테스팅 도구 설치 / jest.config.js 파일 수동 생성
+#### 테스팅 도구 설치 / jest.config.js 파일 수동 생성
 
 ```
 npm i -D jest @types/jest @swc/core @swc/jest \
@@ -70,10 +70,19 @@ npm i -D jest @types/jest @swc/core @swc/jest \
          @testing-library/react @testing-library/jest-dom
 ```
 
-* Parcel 설치
+#### Parcel 설치
 
 ```
 npm i -D parcel
+```
+
+추가 작업으로
+
+* `package.json`에 `"source": "./index.html"` 추가하여 메인 페이지 설정하기
+* `parcel-reporter-static-files-copy` 설치하고 정적 파일 업로드 할 `static` 폴더 만들기&#x20;
+
+```
+npm install -D parcel-reporter-static-files-copy
 ```
 
 
