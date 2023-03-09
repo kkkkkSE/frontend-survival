@@ -55,6 +55,16 @@ npm i -D eslint
 npx eslint --init
 ```
 
+추가로, 파일 수정 후 저장할 때마다 ESLint를 적용하고 싶다면 vscode 기본 설정에서 아래 코드를 추가하면 된다.
+
+```json
+{
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": true
+    }
+}
+```
+
 #### React와 React type 정보 설치
 
 ```
