@@ -11,3 +11,4 @@
   * [TypeScript](contents/week1/typescript.md)
   * [React](contents/week1/react.md)
   * [Bundler, Parcel](contents/week1/bundler-parcel.md)
+  * [Linter, ESLint](contents/week1/linter-eslint.md)
