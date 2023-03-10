@@ -33,3 +33,7 @@ Parcel은 Bundler 중 하나이다.
 {% hint style="info" %}
 Babel은 자바스크립트의 최신 문법을 구 문법으로 바꿀 때 주로 사용한다.
 {% endhint %}
+
+{% hint style="info" %}
+SWC는 Babel의 대체제이다. Babel은 Node기반, SWC는 Rust 기반이라 훨씬 가볍고 빠르다.
+{% endhint %}
