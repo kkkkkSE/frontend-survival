@@ -69,6 +69,8 @@ npx eslint --init
 }
 ```
 
+`.eslintignore` 파일도 `.gitignore`과 동일하게 작성해준다.
+
 #### React와 React type 정보 설치
 
 ```
