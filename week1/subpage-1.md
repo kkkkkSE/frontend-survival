@@ -39,7 +39,11 @@ package.json 내 항목 중
 
 
 
-### 필요한 개발 프로그램 및 개발 도구 설치
+### 필요한 개발 프로그램 및 도구 설치
+
+{% hint style="info" %}
+참고로 _npm install --save-dev_ 나 _npm i -D_ 로 설치한 개발도구는 npx 명령어를 사용할 수 있다.
+{% endhint %}
 
 #### typescript 설치 및 설정 파일 생성
 
