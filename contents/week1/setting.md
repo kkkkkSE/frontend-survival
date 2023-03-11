@@ -113,6 +113,7 @@ npm install -D parcel-reporter-static-files-copy
 
 * `index.html`
 * `src/main.tsx`
+* `src/main.test.tsx`
 * `src/App.tsx`
 * `src/App.test.tsx`
 * `src/components/Greeting.test.tsx`
