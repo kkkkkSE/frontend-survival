@@ -6,7 +6,7 @@
 
 ## Contents
 
-* [Week1](week1/README.md)
+* [Week1](contents/week1/README.md)
   * [Node.js](contents/week1/nodejs.md)
   * [개발 환경 세팅](contents/week1/setting.md)
   * [TypeScript](contents/week1/typescript.md)
@@ -14,3 +14,6 @@
   * [Testing Library](contents/week1/testing-library.md)
   * [Bundler, Parcel](contents/week1/bundler-parcel.md)
   * [Linter, ESLint](contents/week1/linter-eslint.md)
+
+* [Week2](contents/week2/README.md)
+  * [JSX](contents/week2/jsx.md)
