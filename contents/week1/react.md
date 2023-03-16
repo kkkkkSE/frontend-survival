@@ -16,7 +16,7 @@
 
 ### Component
 
-React는 함수형에서는 `return` , 클래스형에서는 `render()` 메서드로 화면을 그려낸다. 이러한 함수 또는 클래스를 **Component** 라고 하며, React에서는 Component를 조합하여 화면을 구성한다.
+React는 함수형에서는 `return` , 클래스형에서는 `render()` 메서드로 화면을 그려낸다. 그 내부에는 화면을 그려내는 부분 뿐만 아니라, 그려낼 화면을 조작하는 여러가지 로직이 포함될 수 있다. 이러한 함수 또는 클래스를 **Component** 라고 하며, React에서는 Component를 조합하여 화면을 구성한다.
 
 즉, 화면의 아주 작은 단위도 Component가 될 수 있고, 필요에 따라 **재사용**이 가능하다.
 
@@ -82,10 +82,7 @@ function Child({ changeSearch }) {
 
 JSX는 **자바스크립트에서 HTML과 유사하게 사용**할 수 있는 문법이다. JSX를 사용해서 Element를 작성하면 가독성이 좋고, 코드가 간결해진다.
 
-_단, React에서 반드시 JSX를 사용해야 하는 것은 아니다. React와 궁합이 잘 맞을 뿐._
-
-* JSX를 사용하면 **마크업과 자바스크립트를 동시에 사용**할 수 있다.
-* 컴포넌트의 변화 감지를 위해 하나의 DOM 트리를 생성해야 하므로 **최상위 Element는 하나만 존재**할 수 있다.
+[JSX 페이지](https://sienna-organization.gitbook.io/dev-road/contents/week2/jsx)에서 더 많은 내용을 볼 수 있다.
 
 ```javascript
 function App() {
