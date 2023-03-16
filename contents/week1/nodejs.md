@@ -34,8 +34,8 @@ Node.js를 설치하면 따라오는 **npm(Node Package Manager)** 이 개발에
 
 주요 항목 설명 :
 
-* `dependencies` : 일반적으로 패키지를 설치하면 `dependencies` 항목 안에 패키지 정보가 담긴다. 애플리케이션 동작과 직접적으로 연관된 프로그램으로, 배포할 때 포함된다.
-* `devDependencies` : `-D` 옵션을 사용해서 패키지를 설치하면 `devDependencies` 항목 안에 패키지 정보가 담긴다. 애플리케이션 동작과는 직접적인 관련은 없지만 개발할 때 필요한 개발 도구로, 배포할 때 포함되지 않는다.
+- `dependencies` : 특별한 옵션 없이 패키지를 설치하면 이 항목 안에 패키지 정보가 담긴다. 애플리케이션 동작과 직접적으로 연관된 패키지를 의미하며, 배포할 때 포함된다.
+- `devDependencies` : `-D`(--save-dev) 옵션을 사용해서 패키지를 설치하면 이 항목 안에 패키지 정보가 담긴다. 애플리케이션 동작과는 직접적인 관련은 없지만 개발할 때 필요한 개발 도구를 설치할 때 `-D`를 사용하여 설치하며, 배포할 때 포함되지 않는다.
 
 ### node-module
 
@@ -43,7 +43,7 @@ Node.js를 설치하면 따라오는 **npm(Node Package Manager)** 이 개발에
 
 ### package-lock.json
 
-이 파일은 보통 npm을 사용해서 node\_modules 폴더나 package.json 파일이 변경되면 갱신되는데, 이 때의 의존성 트리(node\_modules)에 대한 정보를 가지고 있다. package.json 에서의 버전은 Version Range를 따르는데, 정확히 어떤 버전을 사용했는지는 이 파일에서 확인할 수 있다.
+이 파일은 보통 npm을 사용해서 node_modules 폴더나 package.json 파일이 변경되면 갱신되는데, 이 때의 의존성 트리(node_modules)에 대한 정보를 가지고 있다. package.json 에서의 버전은 Version Range를 따르기 때문에 정확히 어떤 버전을 사용했는지는 `package-lock.json`에서 확인할 수 있다.
 
 이로 인해 프로젝트를 진행할 때 다른 사람과 동일한 환경에서 개발할 수 있게 된다.
 
@@ -64,3 +64,11 @@ npx prettier -v
 또한, 설치되지 않은 패키지도 npx를 통해 실행할 수 있다. 실행할 때만 임시로 패키지가 설치되었다가 실행 후에 다시 삭제된다.
 
 추가로, gist에 있는 script도 `npx {gist url}`로 실행 가능하다고 한다.
+
+### Node.js 모듈
+
+Node.js는 CommonJS를 채택했지만 v13.2.0 부터 정식으로 ES modules을 지원하기 시작했다.
+
+다만, ES modules를 사용하려면 `"type" : "module"` 프로퍼티를 추가해야 한다. React 프로젝트에서는 Babel이 자동으로 CommonJS로 바꿔주기 때문에 특별한 설정 없이 ES modules를 사용할 수 있다.
+
+[Module 페이지](https://sienna-organization.gitbook.io/dev-road/contents/week1/module)에서 더 자세한 내용을 확인할 수 있다.
