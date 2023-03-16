@@ -64,6 +64,4 @@ Node.js는 CommonJS를 채택했지만 v13.2.0 부터 정식으로 ES modules을
 
 다만, ES modules를 사용하려면 `"type" : "module"` 프로퍼티를 추가해야 한다. React 프로젝트에서는 Babel이 자동으로 CommonJS로 바꿔주기 때문에 특별한 설정 없이 ES modules를 사용할 수 있다.
 
-{% hint style="info" %}
-모듈과 관련 내용은 [여기](./module.md)에 정리해뒀다.
-{% endhint %}
+[Module 페이지](https://sienna-organization.gitbook.io/dev-road/contents/week1/module)에서 더 자세한 내용을 확인할 수 있다.
