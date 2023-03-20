@@ -4,7 +4,7 @@ JSX는 자바스크립트를 HTML과 유사하게 사용할 수 있는 확장 �
 
 ## React에서 왜 JSX를 사용할까?
 
-React는 본질적으로 UI를 조작하는 여러가지 로직과 렌더링 로직이 긴밀하게 연결되어 있다. 이 두가지 로직을 억지로 분리하지 않고, [컴포넌트](https://sienna-organization.gitbook.io/dev-road/contents/week1/react#component)라는 단위 안에 두 로직을 모두 포함하여 사용하고 있다.
+React는 본질적으로 UI를 조작하는 여러가지 로직과 렌더링 로직이 긴밀하게 연결되어 있다. 이 두가지 로직을 억지로 분리하지 않고, [컴포넌트](../week1/react.md#component)라는 단위 안에 두 로직을 모두 포함하여 사용하고 있다.
 
 이런 점에서 JSX가 React와 잘 맞는다. **자바스크립트 안에서 UI 작업**을 함께 할 수 있기 때문에 **직관적으로 코드를 짤 수 있고 가독성도 좋다.**
 
@@ -42,7 +42,7 @@ Syntactic Sugar : 코드의 기능은 유지하면서 읽는 사람이 쉽게 �
 
 ### 기본
 
-- JSX은 React Element 타입, Property, Children으로 구성된다.
+* JSX은 React Element 타입, Property, Children으로 구성된다.
 
 ```js
 import App from './App.js';
@@ -57,8 +57,8 @@ Children : 'Hello World!'
 */
 ```
 
-- JSX 내에서 **자바스크립트 표현식을 사용할 수 있다.** 표현식을 중괄호로 감싸주면 된다.
-- JSX 자체도 표현식이기 때문에 변수에 할당하거나, 함수에서 반환하거나, 반복문 사용 등 모두 가능하다.
+* JSX 내에서 **자바스크립트 표현식을 사용할 수 있다.** 표현식을 중괄호로 감싸주면 된다.
+* JSX 자체도 표현식이기 때문에 변수에 할당하거나, 함수에서 반환하거나, 반복문 사용 등 모두 가능하다.
 
 ```js
 const userData = {name : "kim", level : "basic"};
@@ -76,7 +76,7 @@ function App(){
 };
 ```
 
-- JSX는 JS + XML으로, XML처럼 **닫는 태그가 필수**이다.
+* JSX는 JS + XML으로, XML처럼 **닫는 태그가 필수**이다.
 
 ```js
 function App(){
@@ -91,10 +91,9 @@ function App(){
 
 ### React Element 타입
 
-- 타입을 컴포넌트로 지정하려면 무조건 대문자로 시작해야 한다. 대문자로 시작하지 않으면 HTML 태그로 인식한다.
-  - 만약 컴포넌트명의 첫 글자를 대문자로 하기 어렵다면, 대문자로 시작하는 변수에다 컴포넌트를 할당하여 타입으로 사용한다.
-
-- 타입이 컴포넌트일 때 점 표기법을 사용할 수 있다.
+* 타입을 컴포넌트로 지정하려면 무조건 대문자로 시작해야 한다. 대문자로 시작하지 않으면 HTML 태그로 인식한다.
+  * 만약 컴포넌트명의 첫 글자를 대문자로 하기 어렵다면, 대문자로 시작하는 변수에다 컴포넌트를 할당하여 타입으로 사용한다.
+* 타입이 컴포넌트일 때 점 표기법을 사용할 수 있다.
 
 ```js
 const Components = {
@@ -108,7 +107,7 @@ function BlueDatePicker() {
 }
 ```
 
-- 타입으로 컴포넌트를 사용하기 위해 일반적인 표현식은 사용할 수 없다. 표현식을 사용하려면 대문자로 시작하는 변수에 할당하여 사용해야 한다.
+* 타입으로 컴포넌트를 사용하기 위해 일반적인 표현식은 사용할 수 없다. 표현식을 사용하려면 대문자로 시작하는 변수에 할당하여 사용해야 한다.
 
 ```js
 import { Phone, Tablet } from './products.js';
@@ -126,13 +125,13 @@ function Story(props) {
 
 ### Property
 
-- 프로퍼티 명은 lowerCamelCase로 작성해야 한다.
-- 프로퍼티 값을 할당하지 않으면 기본적으로 `true`가 할당된다.
+* 프로퍼티 명은 lowerCamelCase로 작성해야 한다.
+* 프로퍼티 값을 할당하지 않으면 기본적으로 `true`가 할당된다.
 
 ### Children
 
-- `&&`를 사용하여 조건부 렌더링을 할 수 있다.
-  - 조건을 줄 `&&` 앞의 표현식은 무조건 진리값(false, null, undefined, true)을 출력해야 한다. 진리값은 렌더링되지 않는다.
+* `&&`를 사용하여 조건부 렌더링을 할 수 있다.
+  * 조건을 줄 `&&` 앞의 표현식은 무조건 진리값(false, null, undefined, true)을 출력해야 한다. 진리값은 렌더링되지 않는다.
 
 ```js
 <div>
@@ -184,12 +183,9 @@ const element = {
 };
 ```
 
-
 {% hint style="info" %}
 이러한 객체를 **React Element**라고 한다. React는 이 객체를 읽어서 DOM을 생성하고 최신 상태로 유지하는 데 사용한다. 어떻게 DOM을 최신 상태로 유지하는지는 Virtual DOM 페이지를 참고하자.
 {% endhint %}
-
-
 
 React 17 이후 도입된 새로운 JSX transform 환경에서는 JSX를 `React.createElement()`가 아닌 `react/jsx-runtime`의 `jsx` 함수로 변환한다. 이 방식은 개발자가 `react/jsx-runtime`을 직접 참조할 필요가 없다.
 
@@ -208,8 +204,6 @@ function App() {
 ```
 
 이 방식을 사용하려면 `@babel/preset-react`의 `runtime`을 `automatic`으로 변경해야 한다.
-
-
 
 {% hint style="info" %}
 TODO : React StrictMode에 관한 내용 정리하기, Virtual DOM 페이지 따로 만들기
