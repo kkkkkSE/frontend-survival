@@ -22,7 +22,7 @@ let tuple: [string, number] = ['string', 123];
 
 // 함수 : 파라미터 타입, 반환값 타입 정의
 funcion printInfo(name: string, age: number) : string {
-  return `이름 ${name], ${age}`;
+  return `이름 ${name}, ${age}`;
 }
 ```
 
