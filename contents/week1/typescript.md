@@ -22,7 +22,7 @@ let tuple: [string, number] = ['string', 123];
 
 // 함수 : 파라미터 타입, 반환값 타입 정의
 funcion printInfo(name: string, age: number) : string {
-  return `이름 ${name], ${age}`;
+  return `이름 ${name}, ${age}`;
 }
 ```
 
@@ -33,8 +33,6 @@ let category: "MOBILE";
 ```
 
 정의된 타입과 다른 타입의 데이터 할당 시 에러가 발생한다.
-
-
 
 ### 재사용 가능한 타입 정의
 
@@ -54,8 +52,6 @@ type Student = {
 const person1: Person = { name: 'hong', age: 13 };
 const person2: Student = { name: 'kang', age: 15 };
 ```
-
-
 
 ### Interface VS Type
 
@@ -101,8 +97,6 @@ interface Student {
 let person: Student = {name: 'kim', age: 23};
 ```
 
-
-
 ### Union Type
 
 `|`기호를 사용하여 2가지 이상의 타입을 정의할 수 있다. Union 타입은 Parameter 제한에 용이하다.
@@ -115,8 +109,6 @@ function fetchProducts (category : Category){
     console.log(category);
 }
 ```
-
-
 
 ### Optional Property
 
@@ -136,8 +128,6 @@ function add(a : number, b? : number) : number {
 }
 ```
 
-
-
 ### Default 값 할당
 
 Optional Property처럼 인자 값을 전달하지 않았을 때 undefined 값을 얻는 것이 불편하다면 기본 값을 할당할 수 있다. 이 경우도 동일하게 인자 값을 전달하지 않아도 에러가 나지 않는다.
@@ -150,13 +140,9 @@ add2() // return 0
 add2(1) // return 1
 ```
 
-
-
 ### 타입 추론
 
 변수에 타입을 정의하지 않더라도 타입스크립트는 자동으로 타입을 추론하여 결정한다. 여러 타입의 데이터를 할당하더라도 최적의 타입을 추론한다.
-
-
 
 ### 간단히 REPL(Read-Eval-Print-Loop) 해보기
 
@@ -165,4 +151,3 @@ add2(1) // return 1
 ```typescript
 npx ts-node
 ```
-
