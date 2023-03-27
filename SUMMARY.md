@@ -15,6 +15,9 @@
   * [Bundler, Parcel](contents/week1/bundler-parcel.md)
   * [Linter, ESLint](contents/week1/linter-eslint.md)
   * [개발 환경 세팅](contents/week1/setting.md)
-
 * [Week2](contents/week2/README.md)
   * [JSX](contents/week2/jsx.md)
+* [Week3](contents/week3/README.md)
+  * [Step 0. 준비하기](contents/week3/step-0./README.md)
+    * [REST API](contents/week3/step-0./rest-api.md)
+    * [GraphQL](contents/week3/step-0./graphql.md)
