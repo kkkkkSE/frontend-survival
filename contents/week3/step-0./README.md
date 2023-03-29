@@ -24,13 +24,11 @@ UI 설계 계획을 세우기 위해 준비해야 할 것이 두 가지 있다. 
 
 ### REST API
 
-[REST API 노트 바로가기](./#rest-api)
-
-###
+[REST API 노트 바로가기](rest-api.md)
 
 ### GraphQL
 
-[GraphQL 노트 바로가기](./#graphql)
+[GraphQL 노트 바로가기](graphql.md)
 
 ###
 
