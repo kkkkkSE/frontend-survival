@@ -84,7 +84,7 @@ app.delete('/user', function (req, res) {
 
 Express에서의 미들웨어는 **요청과 응답 사이**에 특정 목적을 위해 실행되는 함수들을 의미한다. 라우트 구조에서 라우트의 핸들러도 미들웨어 함수에 속한다.
 
-<figure><img src="../../.gitbook/assets/스크린샷 2023-03-29 오후 4.48.00.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/express.png" alt=""><figcaption></figcaption></figure>
 
 이미지 출처 - [Express 공식 문서](https://expressjs.com/ko/guide/writing-middleware.html)
 
@@ -236,7 +236,7 @@ async function getProducts() {
 
 서버로 요청을 보낼 때, 요청을 보내는 주소와 응답을 받을 주소가 다르면 요청에 실패할 수 있다. 이렇게 자신과 다른 출처(Origin)의 자원에 접근할 수 있게 권한을 부여하도록 브라우저에 알려주는 체제가 CORS(Cross-Origin Resource Sharing)이다. 도메인이나 서브도메인, 프로토콜, 포트가 다를 때 리소스의 Origin과 자신의 Origin이 다르다고 하며 이 때 Cross Origin Request를 보낸다.
 
-<figure><img src="../../.gitbook/assets/스크린샷 2023-03-30 오후 8.15.55.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/url.png" alt=""><figcaption></figcaption></figure>
 
 ### CORS는 왜 생겼을까?
 
