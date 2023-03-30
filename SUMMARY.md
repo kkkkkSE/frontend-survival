@@ -21,3 +21,7 @@
   * [Step 0. 준비하기](contents/week3/step-0./README.md)
     * [REST API](contents/week3/step-0./rest-api.md)
     * [GraphQL](contents/week3/step-0./graphql.md)
+* [Week4](contents/week4/README.md)
+  * [Promise](contents/week4/promise.md)
+  * [API 만들고 사용해보기](contents/week4/use-api.md)
+  
