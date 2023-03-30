@@ -12,7 +12,7 @@ description: '키워드 : Express, Fetch API, CORS'
 
 이 때, 라이브러리나 프레임워크를 사용하여 만든 Mock API로 데이터를 받아 미리 구현해놓고 백엔드 개발이 완료되면 API를 갈아끼우는 형식으로 작업할 수 있다.
 
-###
+
 
 ## Express
 
@@ -88,8 +88,6 @@ Express에서의 미들웨어는 **요청과 응답 사이**에 특정 목적을
 
 이미지 출처 - [Express 공식 문서](https://expressjs.com/ko/guide/writing-middleware.html)
 
-
-
 미들웨어 함수의 3번째 인자는 `next`로, 다음 미들웨어 함수를 이어서 실행할 때 무조건 `next()`를 써줘야한다.
 
 ```js
@@ -112,12 +110,14 @@ app.get('/', function (req, res) {
 
 또한 next라는 단어에서 알 수 있듯 미들웨어 함수는 순서가 중요하다. `/` 경로에 대한 라우트 이후에 `myLogger`를 넣는다면 라우트 핸들러가 요청-응답 주기를 종료하므로 `myLogger`가 절대로 실행될 수 없다.
 
+
+
 ### express() 메서드
 
 * `app.use([path,] callback [, callback...])` : 모든 요청에 대해 미들웨어 함수(callback)가 실행된다. 경로를 입력하면 해당 경로로 요청이 왔을 때만 함수가 실행된다.
 * `app.listen([port[, host[, backlog]]][, callback])` : 사용할 port번호를 지정할 수 있다. 생략하면 사용하지 않는 임의의 포트를 할당한다.
 
-###
+
 
 ## nodemon
 
@@ -147,6 +147,8 @@ Fetch는 데이터를 받아오기 위해 네트워크 요청을 할 수 있도�
 
 Fetch API는 Promise를 반환한다. Promise의 자세한 내용은 [Promise 페이지](promise.md)에서 확인할 수 있다.
 
+
+
 ### 요청
 
 ```js
@@ -165,6 +167,8 @@ const response = fetch(url, {
 	method: 'POST',
 });
 ```
+
+
 
 ### 응답 : Response 객체
 
@@ -215,6 +219,8 @@ TypedArray : 원시 binary 데이터에 접근할 수 있도록 데이터를 8�
 
 * `response.text()` – 응답을 텍스트 형태로 반환함
 * **`response.json()` – 응답을 파싱해 JSON 객체로 변경함**
+
+
 
 ### 예시
 

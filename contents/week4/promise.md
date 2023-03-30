@@ -4,7 +4,7 @@
 
 Promise는 비동기 처리를 위해 ES6에 도입된 패턴이다.
 
-###
+
 
 ### 도입 배경
 
@@ -47,7 +47,7 @@ try {
 
 이러한 문제점을 해결하기 위해 Promise가 등장했다.
 
-###
+
 
 ### Promise 객체
 
@@ -70,7 +70,7 @@ const promise = new Promise((resolve, reject) => {
 * fulfilled : 이행 성공, resolve 함수 실행
 * rejected : 이행 실패, reject 함수 실행
 
-###
+
 
 ### Promise 메서드
 
@@ -122,6 +122,8 @@ promise.then(
 #### finally()
 
 마지막에 `.finally()`문도 추가해줄 수 있는데, 이는 비동기 함수의 성공, 실패의 여부와 관계없이 무조건 마지막에 실행되는 함수다. 로딩화면 같은 것을 없앨 때 용이하다.
+
+
 
 ### 개선된 Promise
 
