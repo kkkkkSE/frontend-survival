@@ -126,12 +126,22 @@ describe('calculator', () => {
 
 ## 그 외 패턴
 
-### beforeEach와 afterEach
+### Test Fixture 활용하기
 
-본격적인 테스트 케이스 실행 전과 후에 수행할 작업을 정의하는 데 사용되는 패턴이다.
+Test Fixture란 테스트를 수행하기 위해 사전에 설정된 환경을 의미한다. 테스트를 수행할 때 필요한 초기 데이터나 설정값 등의 준비 작업도 이에 포함된다.
 
-- beforeEach : 테스트 케이스(It 문) 실행 전에 필요한 초기화 작업을 진행한다.
-- afterEach : 테스트 케이스 실행 후에 정리 작업을 진행한다. afterEach를 사용함으로써 테스트 환경을 깨끗하게 유지할 수 있다.
+Test Fixture는 기본적으로 테스트 하기 전에 테스트를 위한 준비 작업을 하고, 테스트가 끝나면 Clean-Up 한다. 이 과정을 통해 테스트 간의 상호 작용을 방지하고, 테스트 환경을 일관성 있게 유지시켜 준다.
+
+#### before과 after
+
+Jest에도 Test Fixture를 위한 `beforeEach`와 `beforeAll`, `afterEach`와 `afterAll` 함수를 지원하고 있다.
+
+- before : 테스트 케이스 실행 전에 필요한 초기화 작업을 진행한다.
+- after : 테스트 케이스 실행 후에 정리 작업을 진행한다. after 함수를 사용함으로써 테스트 환경을 깨끗하게 유지할 수 있다.
+
+`beforeEach`와 `afterEach`는 각각의 테스트 케이스(It문) 마다 직전, 직후에 한번씩 실행되고, `beforeAll`과 `afterAll`은 선언된 곳 전역에서 딱 한번씩만 실행되기 때문에 모든 테스트 케이스에 영향을 미칠 수 있어 사용 시 주의해야 한다.
+
+참고로 ~Each, ~All이 선언되는 위치에 따라 적용되는 범위는 달라질 수 있으므로 주의해야 한다.
 
 ```js
 describe('counter', () => {
