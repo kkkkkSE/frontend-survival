@@ -30,3 +30,5 @@
   * [Jest로 테스트 코드 작성하기](contents/week5/test.md)
   * [TDD](contents/week5/tdd.md)
   * [Mocking](contents/week5/mocking.md)
+  * [MSW](contents/week5/msw.md)
+  * [E2E 테스트 도구](contents/week5/e2e-test.md)

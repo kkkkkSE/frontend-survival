@@ -167,6 +167,38 @@ describe('counter', () => {
 });
 ```
 
+{% hint style="info" %}
+Test Fixture는 여러 테스트에서 중복 발생되는 행위 또는 데이터를 고정시켜 한 곳에서 관리하는 개념이다. 이런 개념에 비추어 봤을 때, 위의 `before`나 `after` 같은 함수가 아닌 테스트에서 쓰일 함수 또는 데이터들도 한 곳에 모아놓고 관리할 수 있다.
+
+강의에서 알려준 방식으로는, 루트 폴더에 `fixtures` 폴더를 만들어 각 파일 당 하나의 함수 또는 데이터를 넣어 놓고 적절한 네이밍을 해서 import하여 사용할 수 있다.
+
+```js
+// fixtures/data1.ts
+const data1 = 'data1';
+
+// fixtures/data2.ts
+const data1 = 'data1';
+```
+
+```js
+// fixtures/index.ts
+import data1 from './data1';
+import data2 from './data2';
+
+export default {
+  data1,
+  data2
+}
+```
+
+```js
+import fixtures from '../fixtures'; // 자동으로 index.ts를 불러옴
+
+jest.mock('./hooks/useFetchData1', () => () => fixtures.data1);
+```
+
+{% endhint %}
+
 ## React Testing Library
 
 ### React Testing Library란?
