@@ -147,13 +147,20 @@ function Counter{
 
 이를 방지하기 위한 방안은 아래와 같다. 여기서 `forceUpdates`와 같이 '실행시킬 함수'를 저장해놓는 프로퍼티를 `listeners`, 실행시킬 함수를 `listener`라 칭했다.
 
-- store에서 저장될 함수에 useCallback 사용하기 :
+* `listener` useCallback 에 담기 :&#x20;
+
 useCallback은 의존성 배열에 있는 요소가 변하기 전까지는 항상 같은 값을 유지한다. 의존성 배열을 빈 배열로 두고 useCallback을 사용했을 때 `listener`는 리렌더링 돼도 새로운 함수가 아닌 기존과 동일한 함수를 유지할 수 있다.
-- store에서 함수들을 저장시킬 그릇으로 Set 사용하기 :
+
+* `listeners`로 Set 사용하기 :&#x20;
+
 useCallback을 사용하여 계속 같은 `listener`가 들어온다 하더라도 `listeners`에 계속해서 쌓이면 메모리가 낭비된다. 같은 함수가 들어왔을 때 쌓이지 않고 함수 리스트를 유지할 수 있도록 Set을 사용하자.
-- useEffect에서 의존성 요소 설정하기 :
+
+* useEffect에서 의존성 요소 설정하기 :&#x20;
+
 store가 변경되거나, `listener`가 변경될 혹시 모를 상황에 대비하여 의존성 배열에 store와 `listener`를 추가한다. 그리고 useEffect 내에서 store에 `listener`를 저장시킨다.
-- useEffect에서 Clean-up 해주기 :
+
+* useEffect에서 Clean-up 해주기 :&#x20;
+
 만약 store가 변경되거나 `listener`가 변경되어 store에 새롭게 추가되어야 한다면, 기존에 있던 안 쓰게 된 `listener`는 삭제시켜야 한다. 예상치 못한 오류를 발생시킬 수 있다.
 
 ```js
