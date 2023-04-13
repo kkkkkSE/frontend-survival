@@ -35,4 +35,5 @@
 * [Week6](contents/week6/README.md)
   * [관심사의 분리](contents/week6/soc.md)
   * [TSyringe](contents/week6/tsyringe.md)
+  * [usestore-ts](contents/week6/usestore-ts.md)
   
