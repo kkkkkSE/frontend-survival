@@ -32,3 +32,6 @@
   * [Mocking](contents/week5/mocking.md)
   * [MSW](contents/week5/msw.md)
   * [E2E 테스트 도구](contents/week5/e2e-test.md)
+* [Week6](contents/week6/README.md)
+  * [관심사의 분리](contents/week6/soc.md)
+  
