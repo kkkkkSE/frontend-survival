@@ -35,5 +35,6 @@
 * [Week6](contents/week6/README.md)
   * [관심사의 분리](contents/week6/soc.md)
   * [TSyringe](contents/week6/tsyringe.md)
+  * [Redux 따라하기](contents/week6/copy-redux.md)
   * [usestore-ts](contents/week6/usestore-ts.md)
   
