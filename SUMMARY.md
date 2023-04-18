@@ -37,4 +37,6 @@
   * [TSyringe](contents/week6/tsyringe.md)
   * [Redux 따라하기](contents/week6/copy-redux.md)
   * [usestore-ts](contents/week6/usestore-ts.md)
+* [Week7](contents/week7/README.md)
+  * [Routing](contents/week7/routing.md)
   
