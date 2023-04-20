@@ -28,6 +28,8 @@ URL의 fragment는 웹페이지 내 특정 위치로 이동하기 위해 많이 
 참고로, 옛날 웹페이지에서는 자바스크립트 파일에서 hash를 이용하여 SPA처럼 새로고침 없이 페이지 일부 내용을 변경할 때 사용하곤 했다.
 {% endhint %}
 
+이 외에도 다양한 프로퍼티를 제공하고 있으니 [공식 문서](https://developer.mozilla.org/ko/docs/Web/API/Location)를 참고하자.
+
 ### 예제
 
 다음은 pathname에 따라 다른 컴포넌트를 렌더링하도록 만든 예제이다.
@@ -45,7 +47,7 @@ export default function App(){
 }
 ```
 
-> 이렇게 페이지로 사용할 컴포넌트들은 `components` 폴더가 아닌`pages` 폴더에 저장해두면 관리가 용이해진다.
+> 이렇게 페이지로 사용할 컴포넌트들은 `components` 폴더가 아닌 `pages` 폴더에 저장해두면 관리가 용이해진다.
 
 위 예제처럼 사용하는 것도 좋지만, 관리해야하는 URL이 많아질수록 렌더링 코드가 복잡해지니 객체로 따로 관리할수도 있다.
 
@@ -72,4 +74,4 @@ export default function App(){
 
 test 환경에서는 `window` 객체가 없어서 `location.pathname`을 사용하지 못하므로 path를 추상화하여 테스트해야 한다.
 
-React Router를 사용함으로서 해당 문제를 해결할 수 있다.
+[React Router](./react-router.md)를 사용함으로서 해당 문제를 해결할 수 있다.
