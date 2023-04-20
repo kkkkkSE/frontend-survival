@@ -10,7 +10,7 @@ React Router는 React에서 라우터 기능을 지원하는 라이브러리다.
 npm i react-router-dom
 ```
 
-## 구성 요소
+## 기본 구성 요소
 
 ### Route
 
@@ -26,7 +26,7 @@ Routes는 Route를 그룹화하기 위해 사용한다. 어느 위치에서나 R
 
 URL이 변경되면 Routes는 하위 Route를 탐색하여 가장 일치하는 path를 찾아 컴포넌트를 렌더링한다.
 
-Routes 내의 [Route는 서로 중첩](#중첩-라우트)될 수 있으며, 중첩 구조는 하위 경로에 대한 Route를 나타낸다.
+Routes 내의 [Route는 서로 중첩](react-router-feature.md#undefined-1)될 수 있으며, 중첩 구조는 하위 경로에 대한 Route를 나타낸다.
 
 ```js
 <Routes>
@@ -61,8 +61,7 @@ const App = () => {
 
 위 예시의 경우, `HomePage`, `AboutPage` 컴포넌트는 화면상에서 `Routes`의 위치인 `Header`와 `Footer` 사이에 표시된다.
 
-하지만 `AboutDetailPage`는 부모 라우트인 `AboutPage` 안에서 표시되어야 하므로, `AboutPage` 컴포넌트에서 하위 경로의 컴포넌트를 표시할 위치에 `Outlet`
-을 추가해줘야 한다.
+하지만 `AboutDetailPage`는 부모 라우트인 `AboutPage` 안에서 표시되어야 하므로, `AboutPage` 컴포넌트에서 하위 경로의 컴포넌트를 표시할 위치에 `Outlet` 을 추가해줘야 한다.
 
 ```js
 const AboutPage = () => {
@@ -75,12 +74,13 @@ const AboutPage = () => {
 };
 ```
 
-예시 코드대로라면 페이지 제목이 표시된 h2 태그 아래에 `AboutDetailPage`
-컴포넌트가 렌더링 된다.
+예시 코드대로라면 페이지 제목이 표시된 h2 태그 아래에 `AboutDetailPage` 컴포넌트가 렌더링 된다.
+
+## Router
 
 ### BrowserRouter
 
-브라우저 라우터는 브라우저 환경에서 [history API](https://developer.mozilla.org/ko/docs/Web/API/History_API)를 사용하여 라우팅을 처리하는 역할을 한다. URL을 읽고 매핑되는 컴포넌트를 렌더링 시켜주거나 뒤로가기와 같은 사용자 이벤트를 처리하여 UI를 업데이트 한다.
+브라우저 라우터는 브라우저 환경에서 [history API](https://developer.mozilla.org/ko/docs/Web/API/History\_API)를 사용하여 라우팅을 처리하는 역할을 한다. URL을 읽고 매핑되는 컴포넌트를 렌더링 시켜주거나 뒤로가기와 같은 사용자 이벤트를 처리하여 UI를 업데이트 한다.
 
 브라우저 라우터는 (라우트를 사용할) 최상위 컴포넌트를 감싸는 형태로 사용한다.
 
@@ -98,11 +98,11 @@ ReactDOM.createRoot(rootNode).render(
 
 ### MemoryRouter
 
-메모리 라우터는 메모리 상에서 라우팅을 처리하는 역할을 한다. 테스트 환경에서는 브라우저를 사용하지 않으므로 메모리 상에서 라우팅을 테스트한다. 
+메모리 라우터는 메모리 상에서 라우팅을 처리하는 역할을 한다. 테스트 환경에서는 브라우저를 사용하지 않으므로 메모리 상에서 라우팅을 테스트한다.
 
 브라우저 라우터가 `App`을 감쌌던 것처럼 메모리 라우터도 동일한 형태를 가져야 한다.
 
-- `initialEntries` : 테스트할 path를 설정해줄 수 있으며, 프로퍼티 값은 배열 형태로 들어가야 한다.
+* `initialEntries` : 테스트할 path를 설정해줄 수 있으며, 프로퍼티 값은 배열 형태로 들어가야 한다.
 
 ```js
 describe('App', () => {
@@ -133,9 +133,9 @@ const router = createBrowserRouter(routes[, opt]);
 
 **route 객체**는 `path`, `element`, `children` 등 [다양한 프로퍼티](https://reactrouter.com/en/main/route/route#type-declaration)로 구성된다.
 
-- path : 컴포넌트와 연결할 경로
-- element : 경로와 연결할 컴포넌트
-- children : 하위 경로에 route를 추가해줄 때 사용(중첩 구조). routes와 동일하게 배열 구조이고, route 객체로 이루어진다.
+* path : 컴포넌트와 연결할 경로
+* element : 경로와 연결할 컴포넌트
+* children : 하위 경로에 route를 추가해줄 때 사용(중첩 구조). routes와 동일하게 배열 구조이고, route 객체로 이루어진다.
 
 아래 코드는 기존의 Routes 구성 방식을 routes 배열로 변경한 예시다.
 
@@ -280,9 +280,9 @@ const url = '/about';
 history.pushState(state, title, url);
 ```
 
-- state : 저장할 상태 객체
-- title : 페이지의 탭에 표시될 타이틀(대부분의 브라우저에서는 적용되지 않고 무시됨)
-- url : 업데이트 할 URL 주소
+* state : 저장할 상태 객체
+* title : 페이지의 탭에 표시될 타이틀(대부분의 브라우저에서는 적용되지 않고 무시됨)
+* url : 업데이트 할 URL 주소
 
 {% hint style="info" %}
 **state**는 key-value 쌍의 상태 객체를 받는다. `pushState`에 의해 상태 객체가 생성되면 history에서 해당 객체의 복사본을 갖게 된다.
@@ -314,7 +314,6 @@ const AboutPage = () => {
     );
 };
 ```
-
 {% endhint %}
 
 하지만 React에서 `pushState` 메서드로 URL을 변경하면 URL 주소만 변경되고, 화면은 업데이트 되지 않는다. React가 URL의 변화를 감지하지 못해 DOM을 업데이트하지 못하기 때문이다. 이러한 이슈를 해결하기 위해 사용하는 것이 아래 React Router의 네가지 요소이다.
@@ -323,10 +322,10 @@ const AboutPage = () => {
 
 리액트 라우터에서 지원하는 컴포넌트로, `a` 태그와 유사한 동작을 한다.
 
-- `a`태그처럼 특정 path에 링크된 버튼처럼 동작한다.
-- `a`태그와 다르게 새로고침을 하지 않는다.
-- `to` 프로퍼티에서 이동할 path를 받는다.
-- 특정 path로 이동하고, 라우터에서 매칭된 컴포넌트로 화면을 업데이트 한다.
+* `a`태그처럼 특정 path에 링크된 버튼처럼 동작한다.
+* `a`태그와 다르게 새로고침을 하지 않는다.
+* `to` 프로퍼티에서 이동할 path를 받는다.
+* 특정 path로 이동하고, 라우터에서 매칭된 컴포넌트로 화면을 업데이트 한다.
 
 ```js
 return (
@@ -404,189 +403,4 @@ npm i -D whatwg-fetch
 // src/setupTests.ts
 
 import 'whatwg-fetch';
-```
-
-## (+) React Router 주요 Features
-
-### 클라이언트 측 라우팅
-
-서버에 별다른 요청 없이도 URL을 업데이트하여 적절한 화면을 나타낼 수 있다.
-
-### 중첩 라우트
-
-중첩 구조로 사용하여 하위 경로도 지정할 수 있다.
-
-```js
-<Route path="/" element={<Root />}>
-    <Route path="contact" element={<Contact />} />
-    <Route path="dashboard" element={<Dashboard />} />
-    <Route element={<AuthLayout />}>
-        <Route path="login" element={<Login />} />
-        <Route path="logout" />
-    </Route>
-</Route>
-```
-
-### 동적 세그먼트
-
-세그먼트란, URL의 경로 부분에서 '/'로 나누어진 각각의 경로들을 의미한다. 동적 세그먼트로 유동적인 경로를 사용할 수 있다.
-
-동적 세그먼트를 이용하면, `useParams()`로 동적 세그먼트에 대해 적용된 값을 key/value 쌍으로 얻을 수 있다.
-
-```js
-// App.jsx
-<Route path="user/:userId" element={<UserInfo />} />
-```
-
-```js
-// UserList.jsx
-import { Link } from "react-router-dom";
-
-function UserListRow({ user }) {
-  return(
-    // ...
-    <Link to={`/user/${user.id}`}>유저 정보 보기</Link>
-    // ...
-  )
-}
-export default List;
-```
-
-```js
-// UserInfo.jsx
-import React from 'react';
-import { useParams } from 'react-router-dom';
-
-function UserInfo() {
-  const { userId } = useParams();
-
-  return (
-    // ...
-   )
-}
-```
-
-### 라우트 순위 매칭
-
-어떤 URL 주소에 대해서 이동 가능한 라우트가 2개 이상일 경우, 리액트 라우터 자체에서 우선순위를 매겨 구체적으로 일치하는 경로를 선택한다.
-
-```js
-<Route path="/teams/:teamId" loader={ ... } />
-<Route path="/teams/new" loader={ ... } />
-```
-
-```js
-<Link to={`/teams/new`}>링크</Link> // 둘 중 아래 라우트 적용
-```
-
-### Link 상대 경로 지정
-
-```js
-// App.jsx
-<Route path="home" element={<Home />}>
-  <Route path="project/:projectId" element={<Project />}>
-  </Route>
-</Route>
-```
-
-```js
-// Home.jsx
-<Home>
-  <Project />
-</Home>
-```
-
-```js
-// Project.jsx @ /home/project/123
-<Link to="abc"> {/* 이동 시 경로 : /home/project/123/abc */}
-<Link to=".."> {/* 이동 시 경로 : /home */}
-```
-
-### 데이터 Load
-
-라우트에는 비동기 함수를 포함한 함수에서 데이터를 받아오는 기능도 있다. 만약 중첩 라우트 구조에서 상위 경로와 하위 경로가 모두 비동기 데이터를 받아온다면, 병렬로 데이터를 받아온다.
-
-```js
-<Route
-  path="/"
-  loader={async ({ request }) => {
-    const res = await fetch("/api/user.json", {
-      signal: request.signal,
-    });
-    const user = await res.json();
-    return user;
-  }}
-  element={<Root />}
->
-  <Route
-    path=":teamId"
-    loader={({ params }) => {
-      return fetch(`/api/teams/${params.teamId}`);
-    }}
-    element={<Team />}
-  >
-  </Route>
-</Route>
-```
-
-`loader`에서 fetch 함수 자체를 반환시키면 `loader`가 자동으로 Response 객체에서 JSON 데이터를 추출한다. 따라서 위 예제의 두 라우트 중 아래에 있는 라우트처럼 사용할수도 있다.
-
-```js
-function Root() {
-  const user = useLoaderData();
-}
-
-function Team() {
-  const team = useLoaderData();
-}
-```
-
-받아온 데이터는 이동한 컴포넌트에서 `useLoaderData`로 받아 사용할 수 있다.
-
-### 리디렉트
-
-`loader` 안에서 상황에 따라 유용하게 다른 페이지로 이동할 수 있다.
-
-```js
-<Route
-  path="dashboard"
-  loader={async () => {
-    const user = await fake.getUser();
-    if (!user) {
-      throw redirect("/login");
-    }
-
-    const stats = await fake.getDashboardStats();
-    return { user, stats };
-  }}
-/>
-<Route
-  path="project/new"
-  action={async ({ request }) => {
-    const data = await request.formData();
-    const newProject = await createProject(data);
-    return redirect(`/projects/${newProject.id}`);
-  }}
-/>
-```
-
-### Pending 상태 체크
-
-`useNavigation()`을 이용하여 페이지의 Pending 상태를 받아올 수 있다. `state`라는 프로퍼티에서 상태를 읽어올 수 있으며, 상태의 종류는 다음과 같다.
-
-- idle : Pending 상태 아님
-- submitting : POST, PUT, PATCH, DELETE로 인해 라우팅이 호출되어 완료하기 전까지의 지연 상태
-- loading : 다른 경로의 페이지를 불러와 완료하기 전까지의 지연 상태
-
-```js
-function Root() {
-  const navigation = useNavigation();
-  return (
-    <div>
-      <Header />
-      {navigation.state === "loading" && <Main />}
-      <Footer />
-    </div>
-  );
-}
 ```
