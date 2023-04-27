@@ -45,4 +45,5 @@
   * [Design System](contents/week8/design-system.md)
   * [Style 정의하기](contents/week8/style.md)
   * [styled-components](contents/week8/styled-components.md)
+  * [Global Style & Theme](contents/week8/global-style-and-theme.md)
   
