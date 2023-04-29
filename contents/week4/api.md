@@ -115,6 +115,7 @@ app.get('/', function (req, res) {
 ### express() 메서드
 
 * `app.use([path,] callback [, callback...])` : 모든 요청에 대해 미들웨어 함수(callback)가 실행된다. 경로를 입력하면 해당 경로로 요청이 왔을 때만 함수가 실행된다.
+  * `express.json()` : express에서 요청을 받을 때,  JSON 형태로 요청을 받기 위해 `app.use()` 와 함께 써줄 수 있다.
 * `app.listen([port[, host[, backlog]]][, callback])` : 사용할 port번호를 지정할 수 있다. 생략하면 사용하지 않는 임의의 포트를 할당한다.
 
 
