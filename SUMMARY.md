@@ -42,6 +42,7 @@
   * [React Router](contents/week7/react-router.md)
   * [React Router Feature](contents/week7/react-router-feature.md)
 * [Week8](contents/week8/README.md)
+  * [CSS](contents/week8/css.md)
   * [Design System](contents/week8/design-system.md)
   * [Style 정의하기](contents/week8/style.md)
   * [styled-components](contents/week8/styled-components.md)
