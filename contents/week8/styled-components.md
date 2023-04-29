@@ -95,7 +95,7 @@ export default function Greeting() {
 }
 ```
 
-예제에서 span 태그의 부모가 h1 태그이므로, [CSS 규칙]에 따라 부모 태그의 스타일을 span이 물려받고, 나중에 작성된 스타일이 우선으로 적용된다.
+예제에서 span 태그의 부모가 h1 태그이므로, [CSS 규칙](/contents/week8/css.md#css-규칙)에 따라 부모 태그의 스타일을 span이 물려받고, 나중에 작성된 스타일이 우선으로 적용된다.
 
 ### 스타일 컴포넌트 상속
 
@@ -233,7 +233,3 @@ function Greeting() {
     );
 }
 ```
-
-{% hint style="info" %}
-TODO : CSS 규칙 링크하기
-{% endhint %}
