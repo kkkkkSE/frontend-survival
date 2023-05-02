@@ -60,7 +60,7 @@ ex) 상품에 대한 정보 확인은 필수다. 결제 시스템, 로그인, �
 
 ## 개발환경 세팅
 
-1주차 과제였던 README 파일을 참고 + CodeceptJS 세팅([아샬님의 CodeceptJS 세팅](https://github.com/ahastudio/CodingLife/tree/main/20211012/react#codeceptjs-%EC%82%AC%EC%9A%A9))
+개발환경 세팅 + CodeceptJS 세팅(아샬님의 [기본환경 세팅](https://github.com/ahastudio/til/blob/main/react/20230205-setup-react-project.md), [CodeceptJS 세팅](https://github.com/ahastudio/CodingLife/tree/main/20211012/react#codeceptjs-%EC%82%AC%EC%9A%A9))
 
 ## 필요한 라이브러리 설치
 
