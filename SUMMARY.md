@@ -52,4 +52,5 @@
   * [상품 목록 페이지](contents/week9/product-list.md)
   * [상품 상세 페이지](contents/week9/product-detail.md)
   * [장바구니 페이지](contents/week9/cart.md)
+  * [장바구니 상품 담기](contents/week9/add-cart.md)
   
