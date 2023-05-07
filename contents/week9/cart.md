@@ -311,6 +311,8 @@ screen.getByText(new RegExp(변수명));
 - container 사용하기 : container는 컴포넌트 렌더링 결과물을 담고있는 변수다. 이를 검증하기 위해 expect와 함께 사용하며, 이를 사용하여 직접 찾는 문자열이 화면에 있는지 파악할 수 있다.
 
 ```js
+const { container } = render(<Component />);
+
 expect(container).toHaveTextContent(변수명);
 ```
 
