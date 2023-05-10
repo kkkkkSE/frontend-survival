@@ -57,3 +57,4 @@
   * [로그인 기능 구현](contents/week10/login.md)
   * [로그아웃 기능 구현](contents/week10/logout.md)
   * [회원가입 기능 구현](contents/week10/signup.md)
+  * [주문 확인하기](contents/week10/order.md)
