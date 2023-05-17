@@ -58,6 +58,6 @@
   * [로그아웃 기능 구현](contents/week10/logout.md)
   * [회원가입 기능 구현](contents/week10/signup.md)
   * [주문 확인하기](contents/week10/order.md)
-* [Week11 : 쇼핑몰 구현3](contents/week10/README.md)
+* [Week11 : 쇼핑몰 구현3](contents/week11/README.md)
   * [배송 정보 입력](contents/week11/shipping-form.md)
   * [주문하기](contents/week11/portone.md)
