@@ -47,7 +47,7 @@
   * [Style 정의하기](contents/week8/style.md)
   * [styled-components](contents/week8/styled-components.md)
   * [Global Style & Theme](contents/week8/global-style-and-theme.md)
-* [Week9 : 쇼핑몰 구현1](contents/week9/README.md)
+* [Week9 : 쇼핑몰 구현1](contents/week9-1/README.md)
   * [개발 전 준비사항](contents/week9/ready-develop.md)
   * [상품 목록 페이지](contents/week9/product-list.md)
   * [상품 상세 페이지](contents/week9/product-detail.md)
