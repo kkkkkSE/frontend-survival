@@ -8,8 +8,8 @@
 
 test 함수는 Jest를 포함한 다양한 테스트 도구에서 일반적으로 사용되는 함수다.
 
-- 첫번째 인자는 테스트 케이스를 설명할 수 있는 문자열이 들어간다.
-- 두번째 인자는 테스트할 함수를 정의한다.
+* 첫번째 인자는 테스트 케이스를 설명할 수 있는 문자열이 들어간다.
+* 두번째 인자는 테스트할 함수를 정의한다.
 
 ```js
 test('add', () => {
@@ -29,9 +29,11 @@ expect 함수는 테스트 함수 내에서 사용되어지며, 테스트할 값
 _유용한 Matcher 함수_ 검색 시 다양한 Matcher 함수를 확인할 수 있다. 참고하자.
 {% endhint %}
 
+* `expect().toEqual(참조형 데이터)` / `expect().toBe(기본형 데이터)` : 데이터 일치성 확인
+
 ## BDD 스타일 패턴 사용하여 작성하기
 
-BDD(Behavior Driven Development)는 비즈니스 요구사항에 초점을 맞춰 소프트웨어를 개발하는 방식이다. 
+BDD(Behavior Driven Development)는 비즈니스 요구사항에 초점을 맞춰 소프트웨어를 개발하는 방식이다.
 
 유명한 BDD 스타일의 테스트 코드 작성 패턴은 Describe-Context-It 패턴과 Given-When-Then 패턴이 있다.
 
@@ -39,9 +41,9 @@ BDD(Behavior Driven Development)는 비즈니스 요구사항에 초점을 맞�
 
 Describe-Context-It은 테스트 코드를 그룹화하고, 테스트 케이스를 구분하기 위해 사용되는 패턴이다. 이 패턴은 테스트 코드를 가독성 있고 일관성 있게 작성할 수 있게 돕는다. 각 항목은 테스트 함수처럼 첫번째 인자인 문자열 인자에 설명을 적을 수 있다.
 
-- Describe : 테스트의 대상을 명시하거나, 하위 테스트들을 대표할 수 있는 큰 테스트 주제를 설명하기도 한다.
-- Context : Describe에서 정한 테스트 대상 또는 환경 내에서의 특정 상황들을 설명한다.
-- It : Context에서 설명된 특정 상황에 대한 결과를 명시하고, 테스트 케이스를 정의한다.
+* Describe : 테스트의 대상을 명시하거나, 하위 테스트들을 대표할 수 있는 큰 테스트 주제를 설명하기도 한다.
+* Context : Describe에서 정한 테스트 대상 또는 환경 내에서의 특정 상황들을 설명한다.
+* It : Context에서 설명된 특정 상황에 대한 결과를 명시하고, 테스트 케이스를 정의한다.
 
 ```js
 const context = describe;
@@ -74,9 +76,9 @@ Given-When-Then는 테스트 케이스를 작성하는 방식 중 하나다.
 
 기대 효과로는 요구사항을 명확하게 표현하고, 테스트 케이스의 목적을 분명히 할 수 있다. 또한 가독성과 유지보수성이 높아진다.
 
-- Given : 테스트 케이스에서 필요한 상태를 설정한다. (입력값이나 시스템 초기 상태 등)
-- When : 테스트할 행동에 대한 코드를 작성한다. (한 번에 한가지 메서드만 사용 추천)
-- Then : 테스트 행동에 대한 검증을 실시하여 예상 결과가 나왔는지 확인한다. (어떠한 로직(행동)도 담아선 안된다.)
+* Given : 테스트 케이스에서 필요한 상태를 설정한다. (입력값이나 시스템 초기 상태 등)
+* When : 테스트할 행동에 대한 코드를 작성한다. (한 번에 한가지 메서드만 사용 추천)
+* Then : 테스트 행동에 대한 검증을 실시하여 예상 결과가 나왔는지 확인한다. (어떠한 로직(행동)도 담아선 안된다.)
 
 ```js
 function calculator(a, b, operator) {
@@ -124,24 +126,18 @@ describe('calculator', () => {
 });
 ```
 
-## 그 외 패턴
 
-### Test Fixture 활용하기
 
-Test Fixture란 테스트를 수행하기 위해 사전에 설정된 환경을 의미한다. 테스트를 수행할 때 필요한 초기 데이터나 설정값 등의 준비 작업도 이에 포함된다.
-
-Test Fixture는 기본적으로 테스트 하기 전에 테스트를 위한 준비 작업을 하고, 테스트가 끝나면 Clean-Up 한다. 이 과정을 통해 테스트 간의 상호 작용을 방지하고, 테스트 환경을 일관성 있게 유지시켜 준다.
-
-#### before과 after
+### before과 after
 
 Jest에도 Test Fixture를 위한 `beforeEach`와 `beforeAll`, `afterEach`와 `afterAll` 함수를 지원하고 있다.
 
-- before : 테스트 케이스 실행 전에 필요한 초기화 작업을 진행한다.
-- after : 테스트 케이스 실행 후에 정리 작업을 진행한다. after 함수를 사용함으로써 테스트 환경을 깨끗하게 유지할 수 있다.
+* before : 테스트 케이스 실행 전에 필요한 초기화 작업을 진행한다.
+* after : 테스트 케이스 실행 후에 정리 작업을 진행한다. after 함수를 사용함으로써 테스트 환경을 깨끗하게 유지할 수 있다.
 
 `beforeEach`와 `afterEach`는 각각의 테스트 케이스(It문) 마다 직전, 직후에 한번씩 실행되고, `beforeAll`과 `afterAll`은 선언된 곳 전역에서 딱 한번씩만 실행되기 때문에 모든 테스트 케이스에 영향을 미칠 수 있어 사용 시 주의해야 한다.
 
-참고로 ~Each, ~All이 선언되는 위치에 따라 적용되는 범위는 달라질 수 있으므로 주의해야 한다.
+참고로 \~Each, \~All이 선언되는 위치에 따라 적용되는 범위는 달라질 수 있으므로 주의해야 한다.
 
 ```js
 describe('counter', () => {
@@ -167,20 +163,18 @@ describe('counter', () => {
 });
 ```
 
-{% hint style="info" %}
-Test Fixture는 여러 테스트에서 중복 발생되는 행위 또는 데이터를 고정시켜 한 곳에서 관리하는 개념이다. 이런 개념에 비추어 봤을 때, 위의 `before`나 `after` 같은 함수가 아닌 테스트에서 쓰일 함수 또는 데이터들도 한 곳에 모아놓고 관리할 수 있다.
+## Test Fixture 활용하기
 
-강의에서 알려준 방식으로는, 루트 폴더에 `fixtures` 폴더를 만들어 각 파일 당 하나의 함수 또는 데이터를 넣어 놓고 적절한 네이밍을 해서 import하여 사용할 수 있다.
+테스트를 위해 변경되지 않는 상태의 객체나 데이터를 만들어 둔 것을 Fixture라고 한다. 테스트를 진행할 때 외부 요인의 간섭을 제거하고, 테스트에만 집중할 수 있도록 Fixture를 활용하는 것이다.
 
-```js
+강의에서는 루트 폴더에 `fixtures` 폴더를 만들어 fixture 데이터들을 관리했다.
+
+```typescript
 // fixtures/data1.ts
 const data1 = 'data1';
 
 // fixtures/data2.ts
 const data1 = 'data1';
-```
-
-```js
 // fixtures/index.ts
 import data1 from './data1';
 import data2 from './data2';
@@ -189,15 +183,10 @@ export default {
   data1,
   data2
 }
-```
-
-```js
 import fixtures from '../fixtures'; // 자동으로 index.ts를 불러옴
 
 jest.mock('./hooks/useFetchData1', () => () => fixtures.data1);
 ```
-
-{% endhint %}
 
 ## React Testing Library
 
@@ -215,8 +204,8 @@ import { render, screen } from '@testing-library/react';
 
 React Testing Library에서 기본적으로 사용되는 함수는 다음과 같다.
 
-- `render()` : 사용자와의 상호작용을 시뮬레이션할 수 있는 함수다. 괄호 안의 인자로 렌더링 될 UI 컴포넌트 등을 넣을 수 있다.
-- `screen()` : `render()`함수를 통해 렌더링 된 결과를 검증하는 코드가 들어간다. 단, screen을 사용하기 위해서는 **먼저 render 함수를 통해서 컴포넌트를 호출해야 한다.**
+* `render()` : 사용자와의 상호작용을 시뮬레이션할 수 있는 함수다. 괄호 안의 인자로 렌더링 될 UI 컴포넌트 등을 넣을 수 있다.
+* `screen()` : `render()`함수를 통해 렌더링 된 결과를 검증하는 코드가 들어간다. 단, screen을 사용하기 위해서는 **먼저 render 함수를 통해서 컴포넌트를 호출해야 한다.**
 
 ```js
 test("테스트 설명", () => {
@@ -237,8 +226,8 @@ test("테스트 설명", () => {
 
 렌더링 된 결과를 검증하기 위해 사용할 수 있는 다양한 screen 메서드가 존재한다. 아래는 가장 많이 사용되는 screen 메서드다.
 
-- `getByText()` : 특정 텍스트를 포함하는 요소를 찾는다. 예를 들어, `getByText('Apple')`은 'Apple'이라는 텍스트를 포함하는 요소를 찾는다.
-- `getByLabelText()` : 라벨(label)과 연결된 요소를 찾는다. 예를 들어, `getByLabelText('User Name')`은 'User Name'이라는 라벨과 연결된 요소를 찾는다.
+* `getByText()` : 특정 텍스트를 포함하는 요소를 찾는다. 예를 들어, `getByText('Apple')`은 'Apple'이라는 텍스트를 포함하는 요소를 찾는다.
+* `getByLabelText()` : 라벨(label)과 연결된 요소를 찾는다. 예를 들어, `getByLabelText('User Name')`은 'User Name'이라는 라벨과 연결된 요소를 찾는다.
 
 문자열을 찾을 때, 일반 문자열을 입력하면 반드시 그 문자열이어야 통과된다. 만약 찾는 문자열이 포함되어 있길 바란다면 정규식을 이용하면 된다.
 
