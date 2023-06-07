@@ -510,3 +510,48 @@ function TextInputWithFocusButton() {
 ### 그래서, 어디서 쓰지?
 
 DOM 엘리먼트에 직접 관여하기 위해서 사용한다. state나 기타 다른 방식으로 하지 못하는 기능을 useRef를 통하면 가능한 경우가 있다. 예시로는 특정 input에 포커스 주기, 스크롤 박스 조작하기, canvas 요소에 그림 그리기 등이 있다.
+
+## useLocation
+
+`useLocation()`은 `window.location` 객체를 반환한다. location 객체는 URL에 포함된 각종 정보를 포함하고 있다.
+
+- pathname : 도메인을 제외한 현재 위치의 경로를 표기한다.
+- search : 쿼리 스트링을 표기한다.
+
+```js
+import { useLocation } from 'react-router';
+
+export default function App() {
+  const location = useLocation();
+  const queryString = location.search;
+
+  // location.pathname = /pathname/id
+  // location.search = ?query=value
+
+  return (
+    <div>
+      {queryString}
+    </div>
+  );
+}
+
+```
+
+## useSearchParams
+
+쿼리 스트링에 담겨있는 값만 사용하고 싶을 때 사용하는 hook이다. `useLocation`의 search를 사용해서 쿼리 값을 가져오려면 가공 과정이 필요하지만, `useSearchParams`를 사용하면 객체 Key 값으로 Value를 가져오는 것처럼 값만 가져올 수 있다.
+
+```js
+import { useSearchParams } from 'react-router-dom';
+
+export default function OrderCompletePage() {
+  const [searchParams] = useSearchParams();
+  const orderId = searchParams.get('orderId');
+
+  return (
+    <div>
+      {orderId} {/* 값만 표기 됨 */}
+    </div>
+  );
+}
+```
